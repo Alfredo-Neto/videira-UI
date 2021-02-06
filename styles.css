@@ -1,0 +1,243 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f5f5f5; /* Used if the image is unavailable */
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Inputs */
+
+input,
+textarea {
+  height: 32px;
+  padding: 0 16px;
+  font-family: "Poppins";
+  font-size: 20px;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 8px 3px 18px -4px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 4px 4px rgb(186, 111, 172);
+  transition: all 0.3s ease;
+}
+
+/* Navigation bar */
+
+nav {
+  height: 74px;
+  background: #161616;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px 0 0;
+  box-sizing: border-box;
+  z-index: 1;
+  overflow: hidden;
+}
+
+nav a {
+  padding: 0 32px;
+  color: #eee;
+  transition: 0.4s;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: #ba6fac;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+}
+
+.active {
+  color: #ba6fac;
+}
+
+/* Logo Image */
+
+#logo-img {
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: 0.4s;
+}
+
+#logo-img:hover {
+  background: #111;
+}
+
+#logo-img img {
+  height: 51px;
+  width: 155px;
+}
+
+/* Menu Icon */
+
+#menu-icon {
+  display: none;
+}
+
+#menu-icon div {
+  display: block;
+  height: 3.5px;
+  width: 25px;
+  margin-top: 4px;
+  background: #fff;
+  border-radius: 9px;
+  left: 0;
+  transition: 0.4s ease;
+}
+
+.toggle .line-1 {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.toggle .line-2 {
+  opacity: 0;
+}
+
+.toggle .line-3 {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/* slideout menu */
+#slideout-menu {
+  background-color: #161616;
+  font-size: 16px;
+  display: none;
+  width: 100%;
+}
+
+#slideout-menu ul {
+  text-align: center;
+  padding: 14px 32px;
+}
+
+#slideout-menu li {
+  padding: 15px;
+}
+#slideout-menu a {
+  color: white;
+  transition: 0.4s ease;
+}
+
+#slideout-menu input {
+  width: 100%;
+  padding: 8px;
+  font-family: "poppins", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+#slideout-menu a:hover {
+  color: #ba6fac;
+}
+
+/* search icon */
+
+#search-icon {
+  color: white;
+  padding: 0 32px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#search-icon:hover {
+  color: #ba6fac;
+}
+
+/* search box */
+
+#search-box {
+  position: fixed;
+  right: 0;
+  top: 24px;
+  width: 500px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+#search-box input {
+  height: 48px;
+  width: 100%;
+}
+
+/* input icons */
+
+#input-icons i {
+  position: absolute;
+}
+
+#input-icons {
+  width: 100%;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.icon {
+  padding: 10px;
+  min-width: 40px;
+  cursor: pointer;
+}
+
+#input-field {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+/* mobile version */
+
+@media screen and (max-width: 1024px) {
+  body {
+    overflow: hidden;
+  }
+
+  nav ul {
+    display: none;
+    overflow: hidden;
+  }
+
+  #menu-icon {
+    display: block;
+    align-self: center;
+  }
+
+  #search-box {
+    display: none;
+  }
+}
